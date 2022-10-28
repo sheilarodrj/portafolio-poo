@@ -10,22 +10,40 @@ namespace desafio_if
     {
         static void Main(string[] args)
         {
+
+            string jugadornuevo; 
+            int puntajenuevo;
+
             Console.WriteLine("Nombre del jugador: ");
-            string jugador = Console.ReadLine();
-            int puntajenuevo = 100;
-            int puntajerecord = 80;
-            string jugadorecord = "maría";
+            jugadornuevo = Console.ReadLine();
+
+            Console.WriteLine("Ingrese el nuevo puntaje: ");
+            puntajenuevo = int.Parse(Console.ReadLine());
+
+            Diferencia(jugadornuevo, puntajenuevo);
+            Console.ReadLine();
+        }
+
+        static void Diferencia(string jugadornuevo, int puntajenuevo)
+        {
+            string jugador = "Mary";
+            int puntaje = 98;
+
+            if (puntajenuevo > puntaje)
+            {
+                Console.WriteLine("La nueva puntuación más alta es " + puntajenuevo);
+                Console.WriteLine("La puntuación más alta fue lograda por " + jugadornuevo);
+            }
+            else
+                Console.WriteLine("La puntuación más alta de " + puntaje + " no se ha podido superar " +
+                    "y aún está en manos de " + jugador);
 
 
-            if (puntajenuevo > puntajerecord)
-            {
-                Console.Write("La nueva puntuación más alta es " + puntajenuevo + ", " + "la nueva puntuación más alta fue lograda por " + jugador + " ");
-            }
-            if (puntajenuevo < puntajerecord)
-            {
-                Console.Write("La puntuación más alta es " + puntajerecord + " " + "no se ha podido superar, y aún está en manos de " + jugadorecord + " ");
-            }
-            Console.Read();
+
+            
+
+
+            
         }
     }
 }
